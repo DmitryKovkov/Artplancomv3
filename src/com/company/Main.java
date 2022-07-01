@@ -16,11 +16,12 @@ public class Main {
             repeatFlip(str, 10000);
             repeatFlip(str, 100000);
     }
-
+    //перевертывание строки методом рекурсии
     public static String flipString(String str) {
         if (str.length()==1) return str;
         return flipString(str.substring(1)) + str.charAt(0);
     }
+    //повторение и замер перевертывания n раз в динамической памяти
     public static void repeatFlip (String str, int n) {
         long start = System.currentTimeMillis();
             for (int i = 0; i < n; i++) {
